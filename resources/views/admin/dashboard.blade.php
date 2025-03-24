@@ -75,7 +75,7 @@
                                     <td class="p-3 border">{{ $lead->veiculo->nome }}</td>
                                     <td class="p-3 border">{{ $lead->created_at->format('d/m/Y H:i') }}</td>
                                     <td class="p-3 border">
-                                        <a href="{{ route('admin.leads.show', $lead->id) }}" class="text-blue-500">👁️</a>
+                                        <a href="{{ route('admin.leads.index') }}" class="text-blue-500">👁️</a>
                                     </td>
                                 </tr>
                             @endforeach
