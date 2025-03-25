@@ -10,11 +10,12 @@
         <!-- Galeria de imagens -->
         <div class="vehicle-gallery mb-8">
             @if($veiculo->fotos->count() > 0)
-                <div class="main-image mb-4">
+                <div class="main-image mb-4 justify-center flex">
                     <!-- Imagem principal com tamanho fixo -->
-                    <img src="{{ asset('storage/' . $veiculo->fotos->first()->caminho) }}" alt="{{ $veiculo->nome }}" id="main-image" class="w-full h-32 object-cover rounded-lg shadow-md">
+                    <img src="{{ asset('storage/' . $veiculo->fotos->first()->caminho) }}" alt="{{ $veiculo->nome }}" id="main-image" class=" w-1/2     object-cover rounded-lg shadow-md">
+
                 </div>
-                <div class="thumbnails flex space-x-4">
+                <div class="main-image mb-4 justify-center flex">
                     @foreach($veiculo->fotos as $foto)
                         <div class="thumbnail cursor-pointer border-2 border-transparent hover:border-blue-500 transition duration-300 rounded-lg overflow-hidden">
                             <img src="{{ asset('storage/' . $foto->caminho) }}" alt="{{ $veiculo->nome }}" class="w-20 h-20 object-cover">
@@ -94,7 +95,7 @@
                     </div>
                 </div>
                 
-                <button type="submit" class="btn btn-primary w-full bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 transition duration-300 text-lg">Enviar Mensagem</button>
+                <button type="submit" class="cursor-pointer btn btn-primary w-full bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 transition duration-300 text-lg">Enviar Mensagem</button>
             </form>
         </div>
     </div>

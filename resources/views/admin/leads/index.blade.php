@@ -20,6 +20,7 @@
                                 <th>Email</th>
                                 <th>Telefone</th>
                                 <th>Veículo</th>
+                                <th>Descrição</th>
                                 <th>Data</th>
                                 <th>Ações</th>
                             </tr>
@@ -38,6 +39,8 @@
                                             <span class="text-muted">N/A</span>
                                         @endif
                                     </td>
+                                    <td>{{ $lead->mensagem }}</td>
+                                
                                     <td>{{ $lead->created_at->format('d/m/Y H:i') }}</td>
                                     <td>
                                         <div class="btn-group">
